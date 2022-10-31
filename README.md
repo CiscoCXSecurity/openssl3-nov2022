@@ -4,6 +4,11 @@
 
 [Rolling 2 day view of updates from this repo](https://github.com/CiscoCXSecurity/openssl3-nov2022/compare/master@%7B2day%7D...master)
 
+## Public trackers
+
+* https://gsd.id/GSD-2022-1006615
+* https://github.com/pblumo/openssl-vuln-nov-2022/blob/main/list.csv
+
 ## Kick banning attacks at the perimeter
 
 * TBC
