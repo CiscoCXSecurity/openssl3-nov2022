@@ -34,7 +34,7 @@
 
 ## Dirty checks
 
-* ```find /path/to/check -type f -iname "libssl.so*" 2>/dev/null | while read filename; do echo $filename,`strings $filename | grep "OpenSSL 3" | wc -l`; done```
+* ```find /path/to/check -type f -iname "lib*ssl*.so*" 2>/dev/null | while read filename; do echo $filename,`strings $filename | grep "OpenSSL 3" | wc -l`; done```
 * ```osqueryi "SELECT distinct processes.name, process_open_sockets.local_port, process_memory_map.path as ssllib from process_memory_map join process_open_sockets USING (pid) join processes USING (pid) WHERE process_memory_map.path LIKE '%lib%ssl%' AND process_memory_map.permissions LIKE '%x%' AND process_open_sockets.local_port <> 0;"```
 * Hunt for "OpenSSL/3.*" in SIEM, WAF logs etc
 
