@@ -9,6 +9,7 @@
 * https://gsd.id/GSD-2022-1006615
 * https://github.com/pblumo/openssl-vuln-nov-2022/blob/main/list.csv
 * https://github.com/NCSC-NL/OpenSSL-2022
+* https://docs.google.com/spreadsheets/d/1EMGeffxhiRceyz6XW6O6cH5tcrBaoLLX06M9OdNsENY/edit#gid=1075768917
 
 ## Kick banning attacks at the perimeter
 
