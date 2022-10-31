@@ -59,4 +59,4 @@ Example here:
 
 ## Source code to check
 
-* https://codesearch.debian.net/search?q=libssl3&literal=1&perpkg=1 - TBC
+* https://codesearch.debian.net/search?q=libssl3&literal=1&perpkg=1
