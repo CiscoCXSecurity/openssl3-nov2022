@@ -1,0 +1,3 @@
+[submodule "samples/openssl"]
+	path = samples/openssl
+	url = https://github.com/openssl/openssl
