@@ -11,6 +11,8 @@
 * https://github.com/NCSC-NL/OpenSSL-2022
 * https://docs.google.com/spreadsheets/d/1EMGeffxhiRceyz6XW6O6cH5tcrBaoLLX06M9OdNsENY/edit#gid=1075768917
 * https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-openssl-W9sdCc2a
+* https://www.openssl.org/blog/blog/2022/11/01/email-address-overflows/
+* https://www.openssl.org/news/cl30.txt
 
 ## Kick banning attacks at the perimeter
 
