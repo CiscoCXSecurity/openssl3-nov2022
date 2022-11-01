@@ -41,8 +41,8 @@
 
 ## Dirty checks
 
-* ```find /path/to/check -type f -iname "lib*ssl*.so*" 2>/dev/null | while read filename; do echo $filename,`strings $filename | grep "OpenSSL 3" | wc -l`; done```
-* ```osqueryi "SELECT distinct processes.name, process_open_sockets.local_port, process_memory_map.path as ssllib from process_memory_map join process_open_sockets USING (pid) join processes USING (pid) WHERE process_memory_map.path LIKE '%lib%ssl%' AND process_memory_map.permissions LIKE '%x%' AND process_open_sockets.local_port <> 0;"```
+* ```find /path/to/check -type f -iname "lib*ssl*.so*" -o -iname "lib*crypt*.so*" -o -iname "lib*ssl*.a*" -o -iname "lib*crypt*.a*" 2>/dev/null | while read filename; do echo $filename,`strings $filename | grep "OpenSSL 3" | wc -l`; done```
+* ```osqueryi "SELECT distinct processes.name, process_open_sockets.local_port, process_memory_map.path as ssllib from process_memory_map join process_open_sockets USING (pid) join processes USING (pid) WHERE (process_memory_map.path LIKE '%lib%ssl%' OR process_memory_map.path LIKE '%lib%crypt%') AND process_memory_map.permissions LIKE '%x%' AND process_open_sockets.local_port <> 0;"```
 * ```Get-ChildItem -Recurse -File -ErrorAction SilentlyContinue -Path "C:\" -Filter "lib*ssl*"```
 * Correlation with other mission critical packages e.g. OpenSSH (https://twitter.com/j0hn__f/status/1587067842515673090): OpenSSH >= 8.9 is a relatively good indicator that the OS also ships with OpenSSL 3
 * Hunt for "OpenSSL/3.*" in SIEM, WAF logs etc
